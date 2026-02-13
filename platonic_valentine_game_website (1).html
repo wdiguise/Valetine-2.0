@@ -1,173 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Valentine’s Day</title>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
-<style>
-body{
- margin:0; font-family:'Dancing Script', cursive; 
- background:radial-gradient(circle at top,#fff1e6,#ffd6e8,#ffeef5);
- text-align:center; overflow-x:hidden; cursor:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAI0lEQVQYV2NkYGD4z8DAwMgABYwMjIwMDAwMjIwMAwADGQIB6Kf4qgAAAABJRU5ErkJggg=='),auto;
-}
-.page{display:none; padding:40px; animation:fadeIn 1.3s ease; min-height:100vh;}
-.page.active{display:block;}
-@keyframes fadeIn{from{opacity:0; transform:scale(.95);}to{opacity:1; transform:scale(1);}}
-
-button{
- background:linear-gradient(135deg,#ff9aa2,#ffb7d5,#ffc1cc);
- border:none; padding:16px 38px; border-radius:45px;
- font-size:22px; cursor:pointer;
- font-family:'Pacifico', cursive;
- box-shadow:0 0 20px rgba(255,140,180,.7);
- transition:0.3s;
-}
-button:hover{transform:scale(1.1); box-shadow:0 0 35px rgba(255,120,170,1);}
-
-.topic-btn{display:block;margin:18px auto; width:280px;}
-.text-box{
- max-width:900px; margin:25px auto; padding:28px;
- border-radius:30px; background:rgba(255,255,255,0.7);
- box-shadow:0 0 25px rgba(255,170,200,.6);
- font-size:22px;
-}
-img{max-width:240px;border-radius:20px;margin:14px; box-shadow:0 0 20px rgba(255,160,190,.6);} 
-
-/* Floating hearts */
-.heart{
- position:fixed; bottom:-20px; color:#ff7aa2; font-size:20px; animation:floatUp 9s linear infinite;
-}
-@keyframes floatUp{from{transform:translateY(0);opacity:1;}to{transform:translateY(-130vh);opacity:0;}}
-
-/* Sparkle */
-.sparkle{animation:sparkle 1.6s infinite alternate;}
-@keyframes sparkle{from{opacity:0.6;}to{opacity:1; text-shadow:0 0 18px gold;}}
-
-/* Crown animation */
-.crown{animation:bounce 2s infinite; display:inline-block;}
-@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
-
-/* Falling petals */
-.petal{position:fixed; top:-10px; font-size:18px; animation:petalFall 10s linear infinite;}
-@keyframes petalFall{to{transform:translateY(110vh) rotate(360deg); opacity:0;}}
-
-/* Confetti */
-.confetti{
- position:fixed; top:-10px; width:9px; height:9px; background:pink; animation:fall 5s linear infinite;
-}
-@keyframes fall{to{transform:translateY(120vh) rotate(360deg);}}
-
-/* Progress bar */
-#progress{position:fixed; top:0; left:0; height:6px; background:#ff7aa2; width:0%; box-shadow:0 0 15px pink; z-index:999;}
-
-</style>
-</head>
-<body>
-<div id="progress"></div>
-
-<audio id="bgm" loop>
- <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7a8a64b7e3.mp3?filename=romantic-piano-112194.mp3" type="audio/mpeg">
-</audio>
-
-<div id="p1" class="page active">
-<h1 class="sparkle">✨ Hello Princess <span class="crown">👑</span> ✨</h1>
-<p class="sparkle">Welcome to your Valentine’s Day journey 💖</p>
-<button onclick="startGame()">Click Here For Love 💕</button>
+<p>Valentine&rsquo;s Day</p>
+<p><audio loop="loop">
+ <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7a8a64b7e3.mp3?filename=romantic-piano-112194.mp3" type="audio/mpeg" /></audio></p>
+<div>
+<h1>✨ Hello Princess 👑 ✨</h1>
+<p>Welcome to your Valentine&rsquo;s Day Journey 💖</p>
+<button>Click Here For More 💕</button></div>
+<div>
+<h2>First I just wanted to say how much us meeting and getting to know each other has been these past almost two weeks. I wanted to share with you something truly special for a very special Princess like you! I have six categories that I feel described what I have learned about you in our past time together.</h2>
+<button>Affectionate</button><button>Gentle</button><button>Hospitable</button><button>Reassuring</button><button>Loving</button><button>Funny Moments</button><button disabled="disabled">I just wanted to say 💖</button></div>
+<div>
+<h2>Affectionate</h2>
+<div>[From the momement we met. I had no idea things would go so far, and I don't mean that in a bad way at all. It just really surpises me how you are like kind of into me? In a way. And I don't mean that like creepy or anything or I am some know it all, but for whatever reason that I did or didn't do, you really have expressed your self in more ways than one and I really just flabbergasted by all the times you have just wanted to grab me through your phone screen and pull me through to the other side to you so we can be together. I could not ask for anything better because there is nothing better than what I have been experiencing from you from the night that we met. Taking us back to the night we met, we were just two goofballs calling each other good boy and good girl. I think I found a good girl, who is a princess in disguise. You really are an affectionate and passionate person and I am just so happy to be here during this time with you. And it's only the beginning of our story.]</div>
+<div>[
+<div><img src="images/IMG_2593.jpg" alt="" /><img src="images/IMG_2595.jpg" alt="" /><img src="images/IMG_2597.jpg" alt="" /><img src="images/IMG_2598.jpg" alt="" /><img src="images/IMG_2609.jpg" alt="" /></div>
+]</div>
+<button>Back</button></div>
+<div>
+<h2>Gentle</h2>
+<div>[This word I describe you as not because of what you have recieved, but for what you have not and perhaps what you have recieved in a negative way. I am so sorry that you have had some hard times in your past, but thats ok because it is how you learn, but it can also make you shy away from the world. You telling me these things about missing out on love and just how there are many things that I have said to you that make you just shine with your peak aura. You are such a gentle creature and such a lovely person and it truly makes me happy seeing you smile when I walked into to your life. I do feel bad if I ever make you cry, good tears or bad. I would never make you cry bad tears, atleast not on purpose. Furthermore, you deserve to have someone show just the smallest amount of effort because you deserve all the effort coming from someone. I hope I can be accepted as that someone who can atleast share kindness and gentle nature that I have to offer. I know you have had your thoughts about other people, even when I came into your life, and that is ok. The world is what its made of, full of people, so I know in the end that we are just still friends and I am just as happy now being your friend and forever if so be the case. So I am not expecting anything out of this message today. But I just wanted to say how precious you are to me. You are not just some trophy sitting on a dusty shelf, but a phyiscal human being who I would just love to see in person sparkle like diamonds one day. I gotta admit, telling me to marry you right now, its very intoxicating, in a good way, so you might just get your wish]</div>
+<div>[
+<div><img src="images/IMG_2607.jpg" alt="" /><img src="images/IMG_2608.jpg" alt="" /></div>
+]</div>
+<button>Back</button></div>
+<div>
+<h2>Hospitable</h2>
+<div>[I do not have as many examples to show you here, but in general you have always lent out a helping hand for me if I ever was in need. That is really hard to find in a person. I might have found my glossy pin needle in the rusty stacks of hay. From paying gas, to offering me meals. I can't imagine what else you would like to do for me and I never even had to ask. I just want to be clear that is something I would NEVER take advantage of out of you. I only want you to do what feels right and it feels amazing that you just say things that would could do to care for me just of the blue. You are just so extravagant and extraordinary to me. I know you might think what you said was not much, but actions speaks louder than words and you just held my tongue and said. Don't worry, I'll take care of it for you". Atleast that is what I would think but I don't want to assume anything of course. Again, I really just wanted to thank you for your hospitality]</div>
+<div>[
+<div><img src="images/IMG_2600.jpg" alt="" /></div>
+]</div>
+<button>Back</button></div>
+<div>
+<h2>Reassuring</h2>
+<div>[You are just such an AMAZING person to me and to others too. You have alwsys communicated so well and so easily, atleast with one another. That is really hard to find in someone and that I am so grateful for. All these conversations we have had, they might have ended in some confusion and worry, but with you. I always feel reassured that everything will be ok, no matter who we are towards each other. I really cannot empthasize the importance and value I seek in you when you show me you can just be so reassuring and so chill about things. Like no matter what the message is said, we both just come out together stronger and it really amazes me just how amazing you are. And I know it's not just with me that you are reassuring towards, which just makes it all the better and all the more touching it is for me to be in your present. Like I mean it when I say it is truly an honor to just speak with you sometimes. Like I might faint and gasp for air if I ever come within 100 miles of you, because you just take my breath away with all of your high quality traits and skills as a person. I know not everyone is like that way and maybe sometimes you'll feel shutdown and that is ok. You don't always have to be at your fullest. You don't always have to text me or talk to me. Whenever you are done, I can take over and personally I don't think either of us have truly stopped in any way. That is why at the very least I try and to send you big, heartwarming, and I say this when I mean it "Loving" messeages to you. More so in a platonic way, but it is all still there and you are so very near and dear to my heart, that every chance I get, I want to be able to reassure you that things will be alright as long we are togther. In person or online, friends or more than friends. I am always here for you and you have shown that you would always be there for me. You are just such a special treat. Sweet and Savory!]</div>
+<div>[
+<div><img src="images/IMG_2591.jpg" alt="" /><img src="images/IMG_2592.jpg" alt="" /><img src="images/IMG_2594.jpg" alt="" /><img src="images/IMG_2599.jpg" alt="" /><img src="images/IMG_2605.jpg" alt="" /></div>
+]</div>
+<button>Back</button></div>
+<div>
+<h2>Loving</h2>
+<div>[When I tell you I get butterflies, run and hide, punch the air/desk/walls, and just jump around and giggle like a kid. I am 1000% truthful. Like from near when we started talking, you just gave me all of these moments. You check in on me before and after my day is over. YOU CALL ME HANDSOME. I really mean it when I say I just am in love with that from you. Making me feel some type way. Me, your handsome man taking a nice stroll together down your awesome city of Toronto while you wrap your arms around mind. I think we'll be the next Diseny Princess movie together. I will never stop being head over heels for when you show me your love. You even think about me when you are doing other stuff too!!! Like WHATTTTT!! The sound of that just makes work at harder at everything I do so I can be a better man. While I do things for myself, there will always be that extra kick of motivation when it comes from a loving, beautiful person like yourself. And I know we have never seen each other, but your aura is the most beautiful thing I have seen in a long time. I'll be sure to keep you shining bright. I also just want to say I really love calling you princess. I hope you do too. ]</div>
+<div>[
+<div><img src="images/IMG_2606.jpg" alt="" /><img src="images/IMG_2611.jpg" alt="" /><img src="images/Screenshot_2026-02-08_at_3.01.06_PM.PNG" alt="" /></div>
+]</div>
+<button>Back</button></div>
+<div>
+<h2>Funny Moments</h2>
+<div>[I wanted to end it here to say that you are really a funny person with just such charisma in your personality. The Mcdonalds story I will always be histarical about. I don't want to sound mean or rude when I say that because I do feel bad that you got in trouble at your work and I hope it won't cause drama later. Just the thought of you sleeping because of me when you should be doing something else just feels so pure, so innocent, so adorable. No one else could see that but I just wanted to say that you are really a star and that when we play games together you just have such a positive outlook on things and you just show off like the Princess you are. True royalty shows and it has given its speeches in this past week. You really make my day and I'm sure you make so many other people laugh too. P.S. I love when you giggle :) ]</div>
+<div>[
+<div><img src="images/IMG_2610.jpg" alt="" /></div>
+]</div>
+<button>Back</button></div>
+<div>
+<h2>I love you 💕</h2>
+<div>[When I say these words. I mean it. I love you. I do want to say that this is within a platonic manner, but it also means that I am open to more and if it's fate, then I want there to be more behind these words. There has only be so much time together but if it feels I cannot just keep talking to you this way without just giving a little more vulnerability. This is a bit scary for me and It's ok no matter how you feel to me because we are just two people in the end. I am not just someone those throws out some word without meaning. Everything I have said and what I say now to you, it's real, atleast for me. I do not have much more to say around this than what has not already been spoken about. Just diving deep and getting all entangled within your brain and learning everything about you. I already know so little and yet so much in some ways. Your favorite color, Blue! Favorite foods Fish &amp; Tacos along with many more that I'll come to learn! You play softball and you throw changeup pitch! You have two cats, one is around a year and the other is a few months old! THERES SO MUCH I'm in love with about you. You have been such an amazing friend to me when honestly I kind of needed one. And I'm not looking to lose you anytime, anywhere soon. I platonically love you and I love the possibility that there could be more one day. And if there isn't, I'll still have you in my life. I want to ask you]</div>
+<h3>Will you be my Valentine?</h3>
+<button>Yes 💖</button><button>No</button></div>
+<div>
+<h1>Happy Valentine&rsquo;s Day 💘</h1>
+<p>I love you Princess 🌸</p>
+<div>[
+<div><img src="images/Screenshot 2026-02-12 at 7.00.58 PM.jpg" alt="" /></div>
+]</div>
 </div>
-
-<div id="p2" class="page">
-<h2 class="sparkle">Here we have all of the things that I love about you and how much love you have shown for me since we have met! Click on each one to see more!</h2>
-<button class="topic-btn" onclick="visit(3)">Affectionate</button>
-<button class="topic-btn" onclick="visit(4)">Searching for Love</button>
-<button class="topic-btn" onclick="visit(5)">Hospitable</button>
-<button class="topic-btn" onclick="visit(6)">Reassuring</button>
-<button class="topic-btn" onclick="visit(7)">Loving</button>
-<button class="topic-btn" onclick="visit(8)">Funny Moments</button>
-<button id="continueBtn" disabled style="opacity:.4" onclick="go(9)">Continue 💖</button>
-</div>
-
-<div id="p3" class="page"><h2>Affectionate</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
-<div id="p4" class="page"><h2>Searching for Love</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
-<div id="p5" class="page"><h2>Hospitable</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
-<div id="p6" class="page"><h2>Reassuring</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
-<div id="p7" class="page"><h2>Loving</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
-<div id="p8" class="page"><h2>Funny Moments</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
-
-<div id="p9" class="page">
-<h2 class="sparkle">My Message For You 💕</h2>
-<div class="text-box">[Write your long message here]</div>
-<div>[Insert images here]</div>
-<h3 class="sparkle">Will you be my Valentine?</h3>
-<button onclick="celebrate()">Yes 💖</button>
-<button>No</button>
-</div>
-
-<div id="p10" class="page">
-<h1 class="sparkle">Happy Valentine’s Day 💘</h1>
-<p class="sparkle">You are truly special to me 🌸</p>
-<div>[Insert images here]</div>
-</div>
-
-<script>
-let visited = new Set();
-
-function startGame(){
- document.getElementById('bgm').play();
- go(2);
-}
-
-function go(n){
- document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
- document.getElementById('p'+n).classList.add('active');
- document.getElementById('progress').style.width = (n/10*100)+'%';
-}
-
-function visit(n){
- visited.add(n);
- go(n);
- if(visited.size===6){
-  let btn=document.getElementById('continueBtn');
-  btn.disabled=false; btn.style.opacity=1; btn.innerHTML='Continue 💖✨';
- }
-}
-
-function back(n){ go(n); }
-
-// Floating hearts
-setInterval(()=>{
- let h=document.createElement('div');
- h.className='heart';
- h.innerHTML='💖';
- h.style.left=Math.random()*100+'vw';
- h.style.fontSize=(14+Math.random()*22)+'px';
- document.body.appendChild(h);
- setTimeout(()=>h.remove(),9000);
-},450);
-
-// Falling petals
-setInterval(()=>{
- let p=document.createElement('div');
- p.className='petal';
- p.innerHTML='🌸';
- p.style.left=Math.random()*100+'vw';
- p.style.animationDuration=(8+Math.random()*5)+'s';
- document.body.appendChild(p);
- setTimeout(()=>p.remove(),13000);
-},1200);
-
-// Confetti celebration
-function celebrate(){
- for(let i=0;i<120;i++){
-  let c=document.createElement('div');
-  c.className='confetti';
-  c.style.left=Math.random()*100+'vw';
-  c.style.background=['#ff9aa2','#ffb7b2','#ffd6d6','#ffc1cc','#ff7aa2'][Math.floor(Math.random()*5)];
-  c.style.animationDuration=(3+Math.random()*3)+'s';
-  document.body.appendChild(c);
-  setTimeout(()=>c.remove(),6000);
- }
- go(10);
-}
-</script>
-</body>
-</html>
