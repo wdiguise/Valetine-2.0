@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine’s Day</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+<style>
+body{
+ margin:0; font-family:'Dancing Script', cursive; 
+ background:radial-gradient(circle at top,#fff1e6,#ffd6e8,#ffeef5);
+ text-align:center; overflow-x:hidden; cursor:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAI0lEQVQYV2NkYGD4z8DAwMgABYwMjIwMDAwMjIwMAwADGQIB6Kf4qgAAAABJRU5ErkJggg=='),auto;
+}
+.page{display:none; padding:40px; animation:fadeIn 1.3s ease; min-height:100vh;}
+.page.active{display:block;}
+@keyframes fadeIn{from{opacity:0; transform:scale(.95);}to{opacity:1; transform:scale(1);}}
+
+button{
+ background:linear-gradient(135deg,#ff9aa2,#ffb7d5,#ffc1cc);
+ border:none; padding:16px 38px; border-radius:45px;
+ font-size:22px; cursor:pointer;
+ font-family:'Pacifico', cursive;
+ box-shadow:0 0 20px rgba(255,140,180,.7);
+ transition:0.3s;
+}
+button:hover{transform:scale(1.1); box-shadow:0 0 35px rgba(255,120,170,1);}
+
+.topic-btn{display:block;margin:18px auto; width:280px;}
+.text-box{
+ max-width:900px; margin:25px auto; padding:28px;
+ border-radius:30px; background:rgba(255,255,255,0.7);
+ box-shadow:0 0 25px rgba(255,170,200,.6);
+ font-size:22px;
+}
+img{max-width:240px;border-radius:20px;margin:14px; box-shadow:0 0 20px rgba(255,160,190,.6);} 
+
+/* Floating hearts */
+.heart{
+ position:fixed; bottom:-20px; color:#ff7aa2; font-size:20px; animation:floatUp 9s linear infinite;
+}
+@keyframes floatUp{from{transform:translateY(0);opacity:1;}to{transform:translateY(-130vh);opacity:0;}}
+
+/* Sparkle */
+.sparkle{animation:sparkle 1.6s infinite alternate;}
+@keyframes sparkle{from{opacity:0.6;}to{opacity:1; text-shadow:0 0 18px gold;}}
+
+/* Crown animation */
+.crown{animation:bounce 2s infinite; display:inline-block;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
+/* Falling petals */
+.petal{position:fixed; top:-10px; font-size:18px; animation:petalFall 10s linear infinite;}
+@keyframes petalFall{to{transform:translateY(110vh) rotate(360deg); opacity:0;}}
+
+/* Confetti */
+.confetti{
+ position:fixed; top:-10px; width:9px; height:9px; background:pink; animation:fall 5s linear infinite;
+}
+@keyframes fall{to{transform:translateY(120vh) rotate(360deg);}}
+
+/* Progress bar */
+#progress{position:fixed; top:0; left:0; height:6px; background:#ff7aa2; width:0%; box-shadow:0 0 15px pink; z-index:999;}
+
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<audio id="bgm" loop>
+ <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7a8a64b7e3.mp3?filename=romantic-piano-112194.mp3" type="audio/mpeg">
+</audio>
+
+<div id="p1" class="page active">
+<h1 class="sparkle">✨ Hello Princess <span class="crown">👑</span> ✨</h1>
+<p class="sparkle">Welcome to your Valentine’s Day journey 💖</p>
+<button onclick="startGame()">Click Here For Love 💕</button>
+</div>
+
+<div id="p2" class="page">
+<h2 class="sparkle">Here we have all of the things that I love about you and how much love you have shown for me since we have met! Click on each one to see more!</h2>
+<button class="topic-btn" onclick="visit(3)">Affectionate</button>
+<button class="topic-btn" onclick="visit(4)">Searching for Love</button>
+<button class="topic-btn" onclick="visit(5)">Hospitable</button>
+<button class="topic-btn" onclick="visit(6)">Reassuring</button>
+<button class="topic-btn" onclick="visit(7)">Loving</button>
+<button class="topic-btn" onclick="visit(8)">Funny Moments</button>
+<button id="continueBtn" disabled style="opacity:.4" onclick="go(9)">Continue 💖</button>
+</div>
+
+<div id="p3" class="page"><h2>Affectionate</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
+<div id="p4" class="page"><h2>Searching for Love</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
+<div id="p5" class="page"><h2>Hospitable</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
+<div id="p6" class="page"><h2>Reassuring</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
+<div id="p7" class="page"><h2>Loving</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
+<div id="p8" class="page"><h2>Funny Moments</h2><div class="text-box">[Write your message here]</div><div>[Insert images here]</div><button onclick="back(2)">Back</button></div>
+
+<div id="p9" class="page">
+<h2 class="sparkle">My Message For You 💕</h2>
+<div class="text-box">[Write your long message here]</div>
+<div>[Insert images here]</div>
+<h3 class="sparkle">Will you be my Valentine?</h3>
+<button onclick="celebrate()">Yes 💖</button>
+<button>No</button>
+</div>
+
+<div id="p10" class="page">
+<h1 class="sparkle">Happy Valentine’s Day 💘</h1>
+<p class="sparkle">You are truly special to me 🌸</p>
+<div>[Insert images here]</div>
+</div>
+
+<script>
+let visited = new Set();
+
+function startGame(){
+ document.getElementById('bgm').play();
+ go(2);
+}
+
+function go(n){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById('p'+n).classList.add('active');
+ document.getElementById('progress').style.width = (n/10*100)+'%';
+}
+
+function visit(n){
+ visited.add(n);
+ go(n);
+ if(visited.size===6){
+  let btn=document.getElementById('continueBtn');
+  btn.disabled=false; btn.style.opacity=1; btn.innerHTML='Continue 💖✨';
+ }
+}
+
+function back(n){ go(n); }
+
+// Floating hearts
+setInterval(()=>{
+ let h=document.createElement('div');
+ h.className='heart';
+ h.innerHTML='💖';
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(14+Math.random()*22)+'px';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),9000);
+},450);
+
+// Falling petals
+setInterval(()=>{
+ let p=document.createElement('div');
+ p.className='petal';
+ p.innerHTML='🌸';
+ p.style.left=Math.random()*100+'vw';
+ p.style.animationDuration=(8+Math.random()*5)+'s';
+ document.body.appendChild(p);
+ setTimeout(()=>p.remove(),13000);
+},1200);
+
+// Confetti celebration
+function celebrate(){
+ for(let i=0;i<120;i++){
+  let c=document.createElement('div');
+  c.className='confetti';
+  c.style.left=Math.random()*100+'vw';
+  c.style.background=['#ff9aa2','#ffb7b2','#ffd6d6','#ffc1cc','#ff7aa2'][Math.floor(Math.random()*5)];
+  c.style.animationDuration=(3+Math.random()*3)+'s';
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),6000);
+ }
+ go(10);
+}
+</script>
+</body>
+</html>
